@@ -9,7 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var tetten: UIImageView!
+    @IBOutlet weak var teksttetten: UIImageView!
+    @IBOutlet weak var tekst: UIButton!
+    @IBOutlet weak var terug: UIButton!
+    
+    @IBOutlet var pinch: UIPinchGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +27,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func actie(sender: AnyObject) {
+    teksttetten.hidden = false
+    tetten.hidden = false
+    tekst.hidden = true
+    terug.hidden = false
+    }
+    
+    
+    @IBAction func terugactie(sender: AnyObject) {
+        teksttetten.hidden = true
+        tetten.hidden = true
+        tekst.hidden = false
+        terug.hidden = true
+        
+    }
+  
+    
 }
 
